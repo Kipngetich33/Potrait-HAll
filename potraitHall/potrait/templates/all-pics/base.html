@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>Potrait HALL - {{title}}</title>
+  {% else %}
+    <title> Potrait HALL </title>
+  {% endif %}
+
+</head>
+<body>
+    {% block content %} <h1>mY pHOtOS fOr:</h1> {%endblock%}
+</body>
+</html>
