@@ -1,10 +1,7 @@
 from django.http  import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
-def welcome(request):
-    return render(request,'welcome.html')
-
+# Views will be created here
 def welcome(request):
     message= "Test"
-    return render(request,'all-pics/all_pics.html')
+    return render(request,'all-pics/all_pics.html',{"message":message,})
