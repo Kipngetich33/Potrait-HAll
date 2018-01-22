@@ -5,12 +5,24 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def save_locations(self):
+        self.save()
+
+    def delete_locations(self):
+        self.delete()
 
 class Category(models.Model):
     name = models.CharField(max_length =100)
 
     def __str__(self):
         return self.name
+
+    def save_categories(self):
+        self.save()
+
+    def delete_categories(self):
+        self.delete()
 
 class Image(models.Model):
     image = models.ImageField(upload_to = 'articles/',blank =True)
