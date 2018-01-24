@@ -22,6 +22,13 @@ class ImageTestClass(TestCase):
         images = Image.objects.all()
         self.assertTrue(len(images)==0)
 
+    def test_all_images(self):
+        self.image.save_images()
+        retrieved_images = Image.get_images()
+        saved_images = Image.objects.all()
+        self.assertTrue(len(retrieved_images)==len(saved_images))
+        
+
 class LocationTestClass(TestCase):
     
     # Set up method

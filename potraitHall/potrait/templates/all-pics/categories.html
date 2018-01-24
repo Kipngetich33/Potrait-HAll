@@ -3,7 +3,7 @@
 
 {% block content %}
 {{block.super}}
-{% for image in all_images%}
+{% for image in category_images%}
 {{image.image_name}}
 <img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive">
 {% endfor %}

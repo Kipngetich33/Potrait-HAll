@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.contrib import admin
+from .models import Category, Location, Image
 
-# Register your models here.
+class ArticleAdmin(admin.ModelAdmin):
+    filter_horizontal =('Category',)
+
+admin.site.register(Category)
+admin.site.register(Location)
+admin.site.register(Image)
