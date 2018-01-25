@@ -26,13 +26,13 @@ class Category(models.Model):
 
 class Image(models.Model):
     image = models.ImageField(upload_to = 'images/')
-    image_name = models.CharField(max_length =30)
+    name = models.CharField(max_length =30,null= True)
     image_description = models.CharField(max_length =3000)
     location = models.ForeignKey(Location,null = True)
     category = models.ForeignKey(Category, null = True)  
 
     def __str__(self):
-        return self.image_name
+        return self.name
 
     def save_images(self):
         self.save()
@@ -54,6 +54,12 @@ class Image(models.Model):
     def get_requested_images(cls,search_name):
         requested_image = cls.objects.filter(image_name = search_name).all()
         return requested_image
+
+    @classmethod
+    def search_image_name(cls,search_term):
+        search_result=cls.objects.filter(name__icontains = search_term)
+        return search_result
+        
  
 
 
