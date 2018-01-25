@@ -5,6 +5,7 @@
 {{block.super}}
 {% for image in all_images%}
 {{image.image_name}}
+<a href="{% url 'details' image.id %}">Details</a>
 <img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive">
 {% endfor %}
-{% endblock %}
+{% endblock %}  

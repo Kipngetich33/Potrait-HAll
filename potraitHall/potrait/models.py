@@ -49,6 +49,11 @@ class Image(models.Model):
     def get_images_categories(cls):
         retrieved_images_category = cls.objects.filter(location = 'Nairobi').all()
         return retrieved_images_category
+
+    @classmethod
+    def get_requested_images(cls,search_name):
+        requested_image = cls.objects.filter(image_name = search_name).all()
+        return requested_image
  
 
 

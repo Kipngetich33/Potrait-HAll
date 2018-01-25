@@ -5,7 +5,9 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     url('^$',views.index,name = 'index'),
-    url(r'^categories/',views.categories,name = 'categories')      
+    url(r'^categories/',views.categories,name = 'categories'),
+    url(r'^details/(\d+)',views.details,name = 'details')            
+
     
 ]
 if settings.DEBUG:

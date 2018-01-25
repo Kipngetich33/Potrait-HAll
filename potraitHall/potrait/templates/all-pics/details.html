@@ -1,0 +1,14 @@
+{%extends 'all-pics/base.html'%}
+{% load staticfiles%}
+
+{% block content %}
+{{block.super}}
+<div class="container">
+    <h5>{{requested_image.image_name}}</h5>
+    <img src="{{requested_image.image.url}}" alt="{{image.name}}" class="img-responsive">
+    <h5>{{requested_image.location}}</h5>
+    <h5>{{requested_image.category}}</h5>
+    <p>{{requested_image.image_description}}</p>
+</div>
+
+{% endblock %}

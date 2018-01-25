@@ -1,4 +1,4 @@
-from django.http  import HttpResponse
+from django.http  import HttpResponse,Http404
 from django.shortcuts import render
 from .models import Image
 
@@ -14,3 +14,7 @@ def index(request):
 def categories(request):
     category_images = Image.get_images_categories()
     return render(request,'all-pics/categories',{"category_images":category_images})
+
+def details(request,photo_id):
+    requested_image = Image.objects.get(id= photo_id)
+    return render(request,'all-pics/details.html',{"requested_image" :requested_image})
