@@ -6,6 +6,9 @@ from .models import Image
 def index(request):
     all_images = Image.get_images()
     return render(request, 'all-pics/all_pics.html',{"all_images":all_images}) 
+    
+def home(request):
+    return render(request ,'all-pics/home.html')
 
 def categories(request,category):
     category_images = Image.get_images_categories(category)

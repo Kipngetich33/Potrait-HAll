@@ -27,17 +27,6 @@
         </form>
       </div>
       <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4"></div>
-      <!-- search form end --> 
-  </div>
-  <div class="row" style="background-color:gainsboro;">
-    {% for image in all_images%}
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <h4 style="text-align: center;">{{image.name}}</h4>
-        <img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive" style="height:200px; width:300px;">
-        <a href="{% url 'details' image.id %}">Details</a>
-      </div>  
-    {% endfor %}
-  </div>
   <a href="{% url 'categories' 2 %}">Science</a>
   <a href="{% url 'categories' 1 %}">Animals</a>
   <a href="{% url 'categories' 4 %}">Scenary</a>
