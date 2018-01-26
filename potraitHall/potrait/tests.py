@@ -5,7 +5,7 @@ class ImageTestClass(TestCase):
     
     # Set up method
     def setUp(self):
-        self.image= Image(image = 'imageurl', image_name ='test_image', image_description='image test description')
+        self.image= Image(image = 'imageurl', name ='test_image', image_description='image test description')
 
     # Testing  instance
     def test_instance(self):
@@ -27,6 +27,14 @@ class ImageTestClass(TestCase):
         retrieved_images = Image.get_images()
         saved_images = Image.objects.all()
         self.assertTrue(len(retrieved_images)==len(saved_images))
+
+    def test_update_image(self):
+        self.image.save_images()
+        self.image.update_image('vincent')
+        self.image.save_images()
+        updated_name = self.image.name
+        self.assTrue(updated_name=='vincent')
+
         
 
 class LocationTestClass(TestCase):

@@ -12,6 +12,7 @@ class Location(models.Model):
     def delete_locations(self):
         self.delete()
 
+
 class Category(models.Model):
     name = models.CharField(max_length =100)
 
@@ -34,11 +35,16 @@ class Image(models.Model):
     def __str__(self):
         return self.name
 
+
     def save_images(self):
         self.save()
 
     def delete_images(self):
         self.delete()
+
+    def update_image(self,new_name):
+        self.name= new_name
+        self.save()
 
     @classmethod
     def get_images(cls):
@@ -46,9 +52,9 @@ class Image(models.Model):
         return retrieved_images
 
     @classmethod
-    def get_images_categories(cls):
-        retrieved_images_category = cls.objects.filter(location = 'Nairobi').all()
-        return retrieved_images_category
+    def get_images_categories(cls,id):
+        retrieved_images_category = cls.objects.filter(categories = id).all()
+        return retrieved_images_category 
 
     @classmethod
     def get_requested_images(cls,search_name):
