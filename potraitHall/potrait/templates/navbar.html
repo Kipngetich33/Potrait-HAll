@@ -11,10 +11,37 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{% url 'home' %}">Potrait HALL</a>
     </div>
-    <div>
-      <a class="navbar-right " href="{% url 'all' %}" style="margin:5px;">All</a>
-      <a class="navbar-right " href="{% url 'home' %}" style="margin:5px;">Categories</a>
+    <div class="navbar-right">
+      <h4><a  href="{% url 'all' %}" style="margin:20px;">All</a></h4>
     </div>
+
+      <div class="navbar-left ">
+         
+          <ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Categories
+                        <span class="caret"></span>
+                    </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="{%url 'categories' 1 %}">Animals</a>
+                </li>
+                <li>
+                  <a href="{%url 'categories' 2 %}">Science</a>
+                </li>
+                <li>
+                  <a href="{%url 'categories' 3 %}">Scenary</a>
+                </li>
+                <li>
+                  <a href="{%url 'categories' 4%}">Celebrities</a>
+                </li>
+                <li>
+                  <a href="{%url 'all' %}">All Images</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div>
   </div>
 </nav>
 </body>

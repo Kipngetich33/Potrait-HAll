@@ -10,7 +10,7 @@
 
 {% block content %}
 {{block.super}}
-<div class="container" >
+<div class="container">
   <div class="row" style="background: url('/media/images/cat_FwPVUQw.jpg') ;height: 150px; text-align: center; margin-bottom:10px;">
         <!-- Adding a search form  -->
       <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4"></div>
@@ -27,9 +27,53 @@
         </form>
       </div>
       <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4"></div>
-  <a href="{% url 'categories' 2 %}">Science</a>
-  <a href="{% url 'categories' 1 %}">Animals</a>
-  <a href="{% url 'categories' 4 %}">Scenary</a>
-  <a href="{% url 'categories' 3 %}">Celebrities</a>
-</div>
+  </div>
+      
+      <div class="panel" style="background-color:white;">
+          <div class="row">
+              <a href="{% url 'categories' 1 %}" >
+                  <img src="/media/images/jcole.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+                  border:solid 10px white; height: 350px; width:450px; margin:50px; ">
+              </a>
+            <div style="margin:150px;">
+                <h4 style="margin:50px; color:purple; font-weight: bolder;">Animals</h4>
+                <p style="font: italics;">
+                    <span style="color:green; font-weight: bolder;">....................</span>
+                    description</p>
+            </div>
+          </div> 
+      
+          <div class="row">
+              <a href="{% url 'categories' 2 %}" >
+                  <img src="/media/images/hand.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+                  border:solid 10px white; height: 350px; width:450px; margin:50px; ">
+              </a>
+            <div style="margin:150px;">
+                <h4 style="margin:50px;">Science</h4>
+                <p>....................description</p>
+            </div>
+          </div> 
+
+          <div class="row">
+              <a href="{% url 'categories' 3 %}" >
+                  <img src="/media/images/jcole.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+                  border:solid 10px white; height: 350px; width:450px; margin:50px; ">
+              </a>
+            <div style="margin:150px;">
+                <h4 style="margin:50px;">Celebrities</h4>
+                <p>....................description</p>
+            </div>
+          </div> 
+
+          <div class="row">
+               <a href="{% url 'categories' 4 %}" >
+                  <img src="/media/images/hand.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+                  border:solid 10px white; height: 350px; width:450px; margin:50px; ">
+              </a>
+            <div style="margin:150px;">
+                <h4 style="margin:50px;">Scenary</h4>
+                <p>....................description</p>
+            </div>
+        
+      </div>
 {% endblock %}  
