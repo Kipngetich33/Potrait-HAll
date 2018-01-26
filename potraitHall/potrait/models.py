@@ -29,7 +29,7 @@ class Image(models.Model):
     name = models.CharField(max_length =30,null= True)
     image_description = models.CharField(max_length =3000)
     location = models.ForeignKey(Location,null = True)
-    category = models.ForeignKey(Category, null = True)  
+    categories = models.ManyToManyField(Category)
 
     def __str__(self):
         return self.name

@@ -1,17 +1,21 @@
 {%extends 'all-pics/base.html'%}
+{% load bootstrap3 %}
 {% load staticfiles%}
+
+
+{% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/all_pics.css' %}">
+{% endblock %}
 
 {% block content %}
 {{block.super}}
-{% for image in all_images%}
-{{image.name}}
-<a href="{% url 'details' image.id %}">Details</a>
-<img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive">
-{% endfor %}
-<!-- Adding a search form  -->
-      <div class="col-sm-4 col-md-4 navbar-right">
-
-        <form class="navbar-form" role="search" action="{% url 'search' %}">
+<div class="container" >
+  <div class="row" style="background: url('/media/images/cat_FwPVUQw.jpg') ;height: 150px; text-align: center; margin-bottom:10px;">
+        <!-- Adding a search form  -->
+      <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4"></div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-md-4 col-xl-md-4">
+        <form class="navbar-form" role="search" action="{% url 'search' %}" style="margin-top:50px;">
 
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Image" name="image">
@@ -22,5 +26,17 @@
 
         </form>
       </div>
-      <!-- search form end -->
+      <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4"></div>
+      <!-- search form end --> 
+  </div>
+  <div class="row" style="background-color:gainsboro;">
+    {% for image in all_images%}
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <h4 style="text-align: center;">{{image.name}}</h4>
+        <img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive" style="height:200px; width:300px;">
+        <a href="{% url 'details' image.id %}">Details</a>
+      </div>  
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}  

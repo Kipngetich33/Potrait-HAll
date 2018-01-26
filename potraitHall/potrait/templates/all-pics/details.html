@@ -4,10 +4,16 @@
 {% block content %}
 {{block.super}}
 <div class="container">
-    <h5>{{requested_image.name}}</h5>
-    <img src="{{requested_image.image.url}}" alt="{{image.name}}" class="img-responsive">
-    <h5>{{requested_image.location}}</h5>
-    <h5>{{requested_image.category}}</h5>
-    <p>{{requested_image.image_description}}</p>
+    
+    
+    <div class="panel" style="height: 500px; background-color: gainsboro;"> 
+        <img src="{{requested_image.image.url}}" alt="{{image.name}}" class="img-responsive" style="float:right; height:900x; width:700px;border:solid 10px white; margin:10px;">
+        <h5><span style="color:blue; font-weight:bolder; margin:15px;">Name:</span>{{requested_image.name}}</h5>
+        <h5><span style="color:blue; font-weight:bolder;  margin:15px;">Location:</span>{{requested_image.location}}</h5>
+        <h5><span style="color:blue; font-weight:bolder;  margin:15px;">Category:</span>{{requested_image.category}}</h5>
+        <hr>
+        <h5 style="text-align: center;"><span style="color:blue; font-weight:bolder;  margin:15px;">Description:</span></h5>
+        <p style="margin:10px;">{{requested_image.image_description}}</p> 
+    </div>
 </div>
 {% endblock %}
