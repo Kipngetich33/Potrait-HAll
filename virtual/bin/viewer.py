@@ -1,4 +1,4 @@
-#!/home/brian/vincent/gallery/virtual/bin/python3.6
+#!/home/brian/vincent/gallery/virtual/bin/python
 #
 # The Python Imaging Library
 # $Id$

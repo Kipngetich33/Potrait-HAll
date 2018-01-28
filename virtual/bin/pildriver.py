@@ -1,4 +1,4 @@
-#!/home/brian/vincent/gallery/virtual/bin/python3.6
+#!/home/brian/vincent/gallery/virtual/bin/python
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine
