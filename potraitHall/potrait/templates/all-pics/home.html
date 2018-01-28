@@ -6,6 +6,7 @@
 {% block styles %}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/all_pics.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Great+Vibes|Kaushan+Script|Pacifico" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -32,14 +33,14 @@
             </div>
         </div>
         <div class="row">
-            <p style="color:white; margin:20px; font-size:20px;text-align: center;">.......<em>A picture is worth a thousand words</em> </p>
+            <p style="color:white; margin:20px; font-size:20px;text-align: center; font-family: 'Pacifico', cursive; font-size:35px;">.......<em>A picture is worth a thousand words.</em> </p>
         </div>
     </div>  
     <!-- panel-->      
     <div class="panel" style="background-color:white ;">
         <div class="row">
-            <a href="{% url 'categories' 1 %}" >
-                <img src="/media/images/jcole.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+            <a href="{% url 'categories' 1 %}" style="color:#4d4d4d;">
+                <img src="/media/images/cat.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
                 -webkit-transform: rotate(30deg);
                 -moz-transform: rotate(30deg);
@@ -50,7 +51,7 @@
             </a>
         <div style="margin:150px; margin-left:200px;">
             <h4 style="margin:50px; color:brown; font-weight: bolder;font-size:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Animals</h4>
-            <p style="font: italics;">
+            <p >
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:brown; font-size:30px; font-weight:bolder;">..............</span>
 
                     I love wildlife they are a spectacle that no one can help but amaze.Some of the pictures that i have collected over the years remind me of my childhood fantasies about animals. View them <a href="{% url 'categories' 1%}">here</a>
@@ -59,8 +60,8 @@
         </div> 
     
         <div class="row">
-            <a href="{% url 'categories' 2 %}" >
-                <img src="/media/images/hand.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+            <a href="{% url 'categories' 2 %}" style="color:#4d4d4d;" >
+                <img src="/media/images/godspartcile.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
                 -webkit-transform: rotate(-30deg);
                 -moz-transform: rotate(-30deg);
@@ -76,8 +77,8 @@
         </div> 
 
         <div class="row">
-            <a href="{% url 'categories' 3 %}" >
-                <img src="/media/images/jcole.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+            <a href="{% url 'categories' 3 %}" style="color:#4d4d4d;" >
+                <img src="/media/images/imaginedragons.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
                 -webkit-transform: rotate(30deg);
                 -moz-transform: rotate(30deg);
@@ -93,8 +94,8 @@
         </div> 
 
         <div class="row">
-            <a href="{% url 'categories' 4 %}" >
-                <img src="/media/images/hand.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+            <a href="{% url 'categories' 4 %}" style="color:#4d4d4d;" >
+                <img src="/media/images/kilimanjaro.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
                 -webkit-transform: rotate(-30deg);
                 -moz-transform: rotate(-30deg);
