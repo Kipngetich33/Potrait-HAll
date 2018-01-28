@@ -12,7 +12,22 @@ def home(request):
 
 def categories(request,category):
     category_images = Image.get_images_categories(category)
-    return render(request,'all-pics/category.html',{"images":category_images})
+
+    def determinine_category(category):
+        if category == '1':
+            return 'Animals'
+        elif category == '2':
+            return 'Science'
+        elif category == '3':
+            return 'Celebrities'
+        elif category == '4':
+            return 'Scenary'
+        else:
+            return 'All'
+
+    message =determinine_category(category)
+
+    return render(request,'all-pics/category.html',{"images":category_images,"message":message})
 
 def details(request,photo_id):
     requested_image = Image.objects.get(id= photo_id)

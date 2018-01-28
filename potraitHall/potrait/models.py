@@ -33,8 +33,7 @@ class Image(models.Model):
     categories = models.ManyToManyField(Category)
 
     def __str__(self):
-        return self.name
-
+        return self.name 
 
     def save_images(self):
         self.save()
@@ -42,8 +41,10 @@ class Image(models.Model):
     def delete_images(self):
         self.delete()
 
-    def update_image(self,new_name):
-        self.name= new_name
+    def update_image(self,new_name,new_description,new_image):
+        self.name = new_name
+        self.image_description = new_description 
+        self.image = new_image 
         self.save()
 
     @classmethod
@@ -65,6 +66,32 @@ class Image(models.Model):
     def search_image_name(cls,search_term):
         search_result=cls.objects.filter(name__icontains = search_term)
         return search_result
+
+    @classmethod
+    def get_image_by_id(cls,id):
+        requested_image = cls.objects.get(id=id)
+        return requested_image
+
+    @classmethod
+    def search_image(cls,category):
+        if category =='Animals' or 'animals':
+            id = 1
+        elif category =='Science' or 'science':
+            id = 2
+        elif category == 'Celebrities' or 'celebrities':
+            id = 3
+        elif category == 'Scenary' or 'scenary':
+            id = 4
+        retrieved_images_category = cls.objects.filter(categories = id).all()
+        return retrieved_images_categor
+        
+            
+    @classmethod
+    def filter_by_location(location):
+        requested_images = Image.objects.filter(location == location).all()
+        return requested_images
+
+
         
  
 

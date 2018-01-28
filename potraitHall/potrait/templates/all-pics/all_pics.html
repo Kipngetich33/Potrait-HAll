@@ -14,10 +14,11 @@
   <div class="row" style="background-color:gainsboro;">
     {% for image in all_images%}
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <h5 style="text-align: center;">{{image.name}}</h5>
+        <a href="{% url 'details' image.id %}"><h5 style="text-align: center;color:purple;font-weight: bolder;">{{image.name}}</h5></a>
         <a href="{% url 'details' image.id %}"><img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive" style="height:200px; width:300px; border:solid 10px white;">
         </a>
-        <a href="{% url 'details' image.id %}">Details</a>
       </div>  
     {% endfor %}
+  </div>
+</div>
 {% endblock %}  

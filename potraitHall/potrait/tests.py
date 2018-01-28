@@ -5,7 +5,7 @@ class ImageTestClass(TestCase):
     
     # Set up method
     def setUp(self):
-        self.image= Image(image = 'imageurl', name ='test_image', image_description='image test description')
+        self.image= Image(image = 'imageurl', name ='test_image', image_description ='image test description')
 
     # Testing  instance
     def test_instance(self):
@@ -30,10 +30,18 @@ class ImageTestClass(TestCase):
 
     def test_update_image(self):
         self.image.save_images()
-        self.image.update_image('vincent')
+        self.image.update_image('vincent','new_description','new_image_url')
         self.image.save_images()
         updated_name = self.image.name
-        self.assTrue(updated_name=='vincent')
+        update_description = self.image.image_description
+        updated_url = self.image.image
+        self.assertTrue(updated_name == 'vincent' and update_description== 'new_description' and updated_url == 'new_image_url')
+
+    def test_get_image_by_id(self):
+        self.image.save_images()
+        gotten_image = Image.get_image_by_id(5)
+        self.assertEqual(gotten_image.id == 5)
+        
 
         
 

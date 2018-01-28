@@ -6,37 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" style=" border: white; margin:5px;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'home' %}">Potrait HALL</a>
+      <a class="navbar-brand" href="{% url 'home' %}" style="color:white;font-weight: bolder;">Potrait HALL</a>
     </div>
     <div class="navbar-right">
-      <h4><a  href="{% url 'all' %}" style="margin:20px;">All</a></h4>
+      <h4><a  href="{% url 'all' %}" style="margin:20px;color: white; font-weight:bolder;">All</a></h4>
     </div>
 
       <div class="navbar-left ">
          
           <ul>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Categories
-                        <span class="caret"></span>
+            <li class="dropdown" style="background-color: gainsboro;" >
+              <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false" style="color:brown;font-weight:bold;">Categories
+                        <span class="caret" style="color:red;" ></span>
                     </a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="{%url 'categories' 1 %}">Animals</a>
+                  <a href="{%url 'categories' 1 %}" style="color:brown;">Animals</a>
                 </li>
                 <li>
-                  <a href="{%url 'categories' 2 %}">Science</a>
+                  <a href="{%url 'categories' 2 %}" style="color:brown;">Science</a>
                 </li>
                 <li>
-                  <a href="{%url 'categories' 3 %}">Scenary</a>
+                  <a href="{%url 'categories' 3 %}" style="color:brown;">Scenary</a>
                 </li>
                 <li>
-                  <a href="{%url 'categories' 4%}">Celebrities</a>
+                  <a href="{%url 'categories' 4%}" style="color:brown;">Celebrities</a>
                 </li>
                 <li>
-                  <a href="{%url 'all' %}">All Images</a>
+                  <a href="{%url 'all' %}" style="color:brown;">All Images</a>
                 </li>
               </ul>
             </li>
