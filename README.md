@@ -1,20 +1,15 @@
 # App Name
-The Watch
+Potrait HAll
 
 ## Description
-This is a web app that allows users to sign up as part of a neighborhood  stay updated on the different things and information about the neigborhood on all factors including finding handymen, meetings etc.
-
+This is personal photo gallery where users can sign up and view all my favorie pictures as per per category. Users can also leave comments on the pictures
 ## User Stories
-* A user can sign in to the application
-* A user can create a profile and set profile with general information and location
-* A user can view a list of different businesses in my neighborhood.
-* A user can Rate the different Businesses.
-* A user can Find the contact Information of different handymen such Electricians
-* A user can leave a review for the different handymen.
-* A user can find contact Information public services such as health department and the police department.
-* A user can post to as well as view posts on their neighborhood tutorials
-* A user can move out of a neighborhood
-* A user can only view information concerning their neighborhood
+users can:
+* View different photos that interest them.
+* Click on a single photo to expand it and also view the details of the photo.
+* Search for different categories of photos.
+* Copy a link to the photo to share with my friends.
+* View photos based on the location they were taken.
 
 ## Set Up and Installation
 
@@ -46,7 +41,7 @@ In the settings.py module of the project make the following changes
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'watch',
+        'NAME': 'potrait',
         'USER': *POSTGRES_USERNAME*,
         'PASSWORD': *POSTGRES_USERNAME*,
     }
